@@ -69,25 +69,85 @@
 </head>
 <body class="bg-brand-dark text-white font-sans antialiased selection:bg-brand-gold selection:text-black">
 
-    <div id="promo-modal" class="hidden fixed inset-0 z-[100] items-center justify-center p-4 bg-black/80 backdrop-blur-sm">
-        <div class="relative bg-brand-dark border-2 border-brand-gold max-w-md w-full rounded-2xl p-8 shadow-2xl shadow-brand-gold/20 text-center">
-            <button onclick="closeModal()" class="absolute top-4 right-4 text-gray-400 hover:text-white transition">
-                <i class="fa-solid fa-xmark text-2xl"></i>
-            </button>
-            <div class="inline-block mb-4 px-3 py-1 border border-brand-gold/30 rounded-full bg-brand-gold/10">
-                <span class="text-brand-gold text-xs font-bold tracking-widest uppercase">Special Launch Offer</span>
-            </div>
-            <h2 class="text-3xl font-black mb-2 text-white uppercase tracking-tighter">Get ₹10,000 OFF</h2>
-            <div class="bg-white/5 border border-dashed border-brand-gold/50 rounded-xl p-4 mb-6">
-                <p class="text-sm text-gray-400 uppercase tracking-widest mb-1">Use Promo Code</p>
-                <p class="text-2xl font-bold text-brand-gold tracking-widest">FIRSTGK</p>
-            </div>
-            <p class="text-white font-semibold mb-6 italic">on the Luxury Premium Pack + 1 year free maintenance</p>
-            <a href="#luxury-pack" onclick="closeModal()" class="block w-full bg-brand-gold hover:bg-yellow-400 text-black py-4 rounded-xl font-black text-lg transition-all transform hover:scale-[1.02]">
-                GET MORE INFO
-            </a>
+   
+    </div>--><!-- Vijayadashami Special Modal -->
+<div id="promo-modal" class="hidden fixed inset-0 z-[100] items-center justify-center p-4 bg-black/85 backdrop-blur-sm overflow-y-auto">
+    <div class="relative bg-brand-dark border-2 border-brand-gold max-w-lg w-full rounded-2xl p-6 sm:p-8 shadow-2xl shadow-brand-gold/20 text-center my-8">
+        
+        <!-- Close Button -->
+        <button onclick="closeModal()" class="absolute top-4 right-4 text-gray-400 hover:text-white transition" aria-label="Close modal">
+            <i class="fa-solid fa-xmark text-2xl"></i>
+        </button>
+
+        <!-- Badge -->
+        <div class="inline-block mb-3 px-3 py-1 border border-brand-gold/30 rounded-full bg-brand-gold/10">
+            <span class="text-brand-gold text-xs font-bold tracking-widest uppercase">Limited-Time Festive Offer</span>
         </div>
+
+        <!-- Heading -->
+        <h2 class="text-2xl sm:text-3xl font-black text-white uppercase tracking-tight mb-1">
+            Vijayadashami Special
+        </h2>
+        <p class="text-xs sm:text-sm text-gray-300 font-medium mb-4">
+            Premium Detailing at Your Doorstep • <span class="italic text-brand-gold">Drive into goodness</span>
+        </p>
+
+        <!-- Pricing Comparison Card -->
+        <div class="bg-white/5 border border-dashed border-brand-gold/50 rounded-xl p-4 mb-4 text-left space-y-2.5">
+            <div class="flex items-center justify-between border-b border-white/10 pb-2">
+                <span class="text-sm font-semibold text-gray-200">Hatchback / Sedan:</span>
+                <div class="flex items-baseline gap-2">
+                    <span class="text-xl font-bold text-white">₹999</span>
+                    <span class="text-xl font-bold text-red-500 line-through">₹2,000</span>
+                </div>
+            </div>
+
+            <div class="flex items-center justify-between">
+                <span class="text-sm font-semibold text-gray-200">SUV / XUV:</span>
+                <div class="flex items-baseline gap-2">
+                    <span class="text-xl font-bold text-white">₹1,299</span>
+                    <span class="text-xl font-bold text-red-500 line-through">₹3,000</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Expiry Date Alert in Big Red -->
+        <div class="mb-4">
+            <p class="text-xs uppercase tracking-wider text-gray-400 mb-0.5">Offer Ends On</p>
+            <p class="text-xl sm:text-2xl font-black text-red-500 tracking-wide uppercase drop-shadow-md">
+                October 31, 2026
+            </p>
+        </div>
+
+        <!-- Falling Down / Countdown Timer -->
+        <div class="mb-6">
+            <p class="text-[11px] uppercase tracking-widest text-brand-gold/90 font-semibold mb-2">Hurry! Offer Expires In:</p>
+            <div class="grid grid-cols-4 gap-2 text-center max-w-xs mx-auto">
+                <div class="bg-white/10 border border-brand-gold/30 rounded-lg py-2 px-1">
+                    <span id="timer-days" class="block text-xl font-extrabold text-white">00</span>
+                    <span class="text-[10px] text-gray-400 uppercase tracking-wider">Days</span>
+                </div>
+                <div class="bg-white/10 border border-brand-gold/30 rounded-lg py-2 px-1">
+                    <span id="timer-hours" class="block text-xl font-extrabold text-white">00</span>
+                    <span class="text-[10px] text-gray-400 uppercase tracking-wider">Hours</span>
+                </div>
+                <div class="bg-white/10 border border-brand-gold/30 rounded-lg py-2 px-1">
+                    <span id="timer-minutes" class="block text-xl font-extrabold text-white">00</span>
+                    <span class="text-[10px] text-gray-400 uppercase tracking-wider">Mins</span>
+                </div>
+                <div class="bg-white/10 border border-brand-gold/30 rounded-lg py-2 px-1 animate-pulse">
+                    <span id="timer-seconds" class="block text-xl font-extrabold text-brand-gold">00</span>
+                    <span class="text-[10px] text-gray-400 uppercase tracking-wider">Secs</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Link To Vijayadashami Section On Website -->
+        <a href="#vijayadashami-special" onclick="closeModal()" class="block w-full bg-brand-gold hover:bg-yellow-400 text-black py-4 rounded-xl font-black text-base uppercase tracking-widest transition-all transform hover:scale-[1.02] shadow-lg shadow-brand-gold/30">
+            View Package & Book
+        </a>
     </div>
+</div>
 
     <nav class="fixed w-full z-50 bg-brand-dark/90 backdrop-blur-md border-b border-white/10">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -157,8 +217,8 @@
                         <p class="text-red-500 line-through text-2xl font-bold mb-1">Standard: ₹19,999</p>
                         
                         <div class="mb-6">
-                            <span class="text-sm text-brand-gold uppercase font-bold">Offer Price with FIRSTGK</span>
-                            <h4 class="text-6xl font-black text-white">₹9,999</h4>
+                            <span class="text-sm text-brand-gold uppercase font-bold">Offer Price</span>
+                            <h4 class="text-6xl font-black text-white">₹15,999</h4>
                         </div>
                         <a href="https://wa.me/918520813684?text=I%20want%20to%20book%20the%20Luxury%20Premium%20Pack%20using%20FIRSTGK" class="inline-block w-full bg-brand-gold hover:bg-yellow-400 text-black py-4 rounded-xl font-black text-xl transition-all">BOOK THIS PACK</a>
                         <p class="mt-4 text-[10px] text-gray-500 uppercase tracking-widest">*Terms and Conditions Apply</p>
@@ -168,6 +228,59 @@
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                 
+
+<div id="vijayadashami-special" class="bg-white/5 border border-white/10 p-6 rounded-2xl hover:border-brand-gold/50 transition-all flex flex-col group">
+    <div class="flex items-center justify-between mb-3">
+        <h4 class="text-xl font-bold group-hover:text-brand-gold transition-colors">Vijayadashami Special</h4>
+        <span class="text-[10px] font-semibold tracking-wider uppercase bg-brand-gold/20 text-brand-gold border border-brand-gold/30 px-2 py-0.5 rounded-full">Limited-Time Offer</span>
+    </div>
+    
+    <!-- Pricing Section -->
+    <div class="mb-4 space-y-2">
+        <span class="text-xs text-gray-400 uppercase tracking-wider block">Festive Special Pricing</span>
+        
+        <div class="flex items-baseline justify-between border-b border-white/5 pb-1">
+            <span class="text-sm font-semibold text-gray-300">Hatchback / Sedan:</span>
+            <div class="flex items-baseline gap-2">
+                <span class="text-xl font-bold text-white">₹999</span>
+                <span class="text-xl font-bold text-red-500 line-through">₹2,000</span>
+            </div>
+        </div>
+
+        <div class="flex items-baseline justify-between">
+            <span class="text-sm font-semibold text-gray-300">SUV / XUV:</span>
+            <div class="flex items-baseline gap-2">
+                <span class="text-xl font-bold text-white">₹1,299</span>
+                <span class="text-xl font-bold text-red-500 line-through">₹3,000</span>
+            </div>
+        </div>
+
+        <p class="text-[11px] text-brand-gold/80 pt-1 font-medium">Valid until October 31, 2026</p>
+    </div>
+
+    <!-- Package Details -->
+    <div class="text-gray-400 text-xs mb-6 flex-grow space-y-2.5 leading-relaxed">
+        <p>
+            <strong class="text-white">Exterior:</strong> Foam Wash, Wheel Arch Cleaning & Dressing, Tire Dressing, Wax Coating.
+        </p>
+        <p>
+            <strong class="text-white">Interior:</strong> Vacuum Cleaning, Dashboard & Center Console Cleaning, Door Jams Wash.
+        </p>
+        <p>
+            <strong class="text-white">Engine Bay:</strong> Dust Cleaning, Safe Foam Wash (with electrical components protected).
+        </p>
+        <p>
+            <strong class="text-brand-gold">Service Highlights:</strong> Doorstep Service, Premium Grade Products, Trained Experts & Quality Inspected.
+        </p>
+    </div>
+
+    <!-- CTA -->
+    <a href="https://wa.me/918520813684?text=Hi%20Goat%20Koating,%20I%20want%20to%20book%20the%20Vijayadashami%20Festive%20Offer." class="mt-auto w-full bg-brand-gold/90 hover:bg-brand-gold text-black text-center py-3 rounded-xl font-bold text-sm transition-all uppercase tracking-widest">Book Your Festive Slot</a>
+</div>
+
+
+
+
                 <div class="bg-white/5 border border-white/10 p-6 rounded-2xl hover:border-brand-gold/50 transition-all flex flex-col group">
                     <h4 class="text-xl font-bold mb-2 group-hover:text-brand-gold transition-colors">GK Signature Premium</h4>
                     <div class="mb-4">
@@ -407,5 +520,63 @@
         function closeModal() { modal.classList.add('hidden'); }
         window.onclick = function(event) { if (event.target == modal) closeModal(); }
     </script>
+
+<script>
+function closeModal() {
+    const modal = document.getElementById('promo-modal');
+    if (modal) {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+    }
+}
+
+function openModal() {
+    const modal = document.getElementById('promo-modal');
+    if (modal) {
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+    }
+}
+
+// Countdown Timer to October 31, 2026 23:59:59
+function startCountdown() {
+    const targetDate = new Date("October 31, 2026 23:59:59").getTime();
+
+    const interval = setInterval(function() {
+        const now = new Date().getTime();
+        const difference = targetDate - now;
+
+        if (difference <= 0) {
+            clearInterval(interval);
+            return;
+        }
+
+        const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+        const daysEl = document.getElementById("timer-days");
+        const hoursEl = document.getElementById("timer-hours");
+        const minutesEl = document.getElementById("timer-minutes");
+        const secondsEl = document.getElementById("timer-seconds");
+
+        if (daysEl) daysEl.innerText = String(days).padStart(2, '0');
+        if (hoursEl) hoursEl.innerText = String(hours).padStart(2, '0');
+        if (minutesEl) minutesEl.innerText = String(minutes).padStart(2, '0');
+        if (secondsEl) secondsEl.innerText = String(seconds).padStart(2, '0');
+    }, 1000);
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+    startCountdown();
+    // Optional: open automatically after 2 seconds
+    // setTimeout(openModal, 2000);
+});
+</script>
+
+
+
+
 </body>
 </html>
